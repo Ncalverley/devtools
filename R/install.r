@@ -109,7 +109,7 @@ install_deps <- function(pkg = ".", dependencies = NA,
 
   message("Installing dependencies for ", pkg$package, ":\n",
     paste(deps, collapse = ", "))
-  install.packages(deps, dependencies = NA, Ncpus = threads)
+  install.packages(deps, dependencies = NA, Ncpus = threads, repos="http://cran.rstudio.com/")
   invisible(deps)
 }
 
